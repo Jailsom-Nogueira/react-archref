@@ -1,0 +1,151 @@
+{
+  "name": "react-archref",
+  "version": "0.1.0",
+  "private": false,
+  "main": "build/index.js",
+  "description": "Public React Reference Architecture.",
+  "keywords": [
+    "archref",
+    "react",
+    "frontend"
+  ],
+  "autor": {
+    "name": "Jay",
+    "email": "jailsom.nogueira@gmail.com",
+    "github": "https://github.com/Jailsom-Nogueira"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jailsom-Nogueira/react-archref"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "legacy": "npm i --legacy-peer-deps",
+    "format": "prettier \"./src/**/*.{ts,tsx}\" --write",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "test": "react-scripts test --coverage --colors --watchAll false",
+    "prettier": "prettier --write . \"./src/**/*.{ts,tsx,js,jsx}\"",
+    "lint": "eslint --color src/**/*.{ts,tsx}",
+    "lint-fix": "npm run lint -- --fix"
+  },
+  "dependencies": {
+    "axios": "0.26.1",
+    "date-fns": "2.28.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "4.3.1",
+    "react-router-dom": "6.2.2",
+    "react-scripts": "5.0.0",
+    "styled-components": "5.3.3",
+    "typescript": "4.6.2",
+    "web-vitals": "2.1.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.17.6",
+    "@babel/core": "7.17.8",
+    "@babel/eslint-parser": "7.17.0",
+    "@babel/plugin-proposal-class-properties": "7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "7.17.3",
+    "@babel/plugin-proposal-optional-chaining": "7.16.7",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/plugin-transform-arrow-functions": "7.16.7",
+    "@babel/plugin-transform-proto-to-assign": "7.16.7",
+    "@babel/plugin-transform-runtime": "7.17.0",
+    "@babel/plugin-transform-spread": "7.16.7",
+    "@babel/preset-env": "7.16.11",
+    "@testing-library/jest-dom": "5.16.2",
+    "@testing-library/react": "12.1.4",
+    "@testing-library/user-event": "13.5.0",
+    "@types/jest": "27.4.1",
+    "@types/node": "17.0.21",
+    "@types/react": "17.0.39",
+    "@types/react-dom": "17.0.13",
+    "@types/react-router-dom": "5.3.3",
+    "@types/styled-components": "5.1.24",
+    "@typescript-eslint/eslint-plugin": "5.14.0",
+    "@typescript-eslint/parser": "5.14.0",
+    "eslint": "8.10.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-import-resolver-babel-plugin-root-import": "1.1.1",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-import-helpers": "1.2.1",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.29.3",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-plugin-security": "1.4.0",
+    "husky": "7.0.4",
+    "jest-svg-transformer": "^1.0.0",
+    "prettier": "2.5.1",
+    "svgo": "2.8.0"
+  },
+  "lint-staged": {
+    "./src/*": [
+      "npm run lint --fix"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      },
+      {
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ],
+  "jest": {
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover",
+      "html"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{tsx,jsx,ts}",
+      "!src/**/*.stories.{tsx,jsx,ts}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "index.ts",
+      "styles.ts",
+      "global.ts",
+      "theme.ts",
+      "api.ts",
+      "interfaces.ts",
+      "reportWebVitals.ts",
+      "\\.d\\.ts$",
+      "/src/routes/",
+      "/src/common/utils/",
+      "/src/configs/",
+      "/src/containers/",
+      "/node_modules/",
+      "/src/index.tsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  }
+}
