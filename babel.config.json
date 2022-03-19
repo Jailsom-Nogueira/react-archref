@@ -1,0 +1,42 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "edge": "17",
+            "firefox": "60",
+            "chrome": "67",
+            "safari": "11.1"
+          },
+          "useBuiltIns": "usage",
+          "corejs": "3.6.5"
+        }
+      ]
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "dynamic-import-node",
+          [
+            "@babel/plugin-transform-runtime",
+            {
+              "regenerator": true,
+              "corejs": 3
+            }
+          ]
+        ]
+      }
+    },
+    "plugins": [
+      "@babel/plugin-transform-spread",
+      "@babel/plugin-proposal-object-rest-spread",
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-syntax-dynamic-import",
+      "@babel/plugin-transform-arrow-functions",
+      "@babel/plugin-transform-proto-to-assign",
+      "@babel/plugin-proposal-optional-chaining"
+    ]
+  }
+
+  
